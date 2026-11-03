@@ -1,0 +1,15 @@
+:root {
+  --ember: #ff8a3a;
+  --ember-hot: #ffd08a;
+  --bone: #e3d6b8;
+  --ink: #0a0907;
+  --panel: rgba(14, 11, 9, 0.82);
+  --border: #5a4632;
+  --font-title: 'Cormorant Garamond', 'Noto Serif', serif;
+  --font-body: 'Noto Serif', serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; color: var(--bone); font-family: var(--font-body); }
+#game { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; cursor: default; }
+#ui { position: fixed; inset: 0; pointer-events: none; user-select: none; }
+#ui .interactive { pointer-events: auto; }

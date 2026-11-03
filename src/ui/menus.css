@@ -1,0 +1,27 @@
+.screen { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: auto; }
+.title-screen .logo { font-family: var(--font-title); font-weight: 700; font-size: clamp(64px, 11vw, 150px); letter-spacing: .14em; color: #e9d8b4; text-shadow: 0 0 30px rgba(255,120,40,.35), 0 0 4px #000, 0 6px 30px #000; opacity: 0; animation: fadein 2.5s ease .4s forwards; }
+.title-screen .sub { font-family: var(--font-title); font-style: italic; font-size: clamp(20px, 2.4vw, 30px); color: #c79a62; margin-top: -6px; opacity: 0; animation: fadein 2s ease 1.4s forwards; }
+.title-screen .demo { margin-top: 10px; font-size: 13px; letter-spacing: .4em; text-transform: uppercase; color: #8a7a62; opacity: 0; animation: fadein 2s ease 1.8s forwards; }
+.title-screen .press { position: absolute; bottom: 14%; font-size: 17px; color: #e0cfae; opacity: 0; animation: fadein 1.5s ease 2.6s forwards, pulse 2.4s ease-in-out 4.1s infinite; text-shadow: 0 0 8px #000; }
+.title-screen .rule { width: min(520px, 70vw); height: 1px; margin: 14px 0 6px; background: linear-gradient(90deg, transparent, #b07a3a, transparent); opacity: 0; animation: fadein 2s ease 1.2s forwards; }
+@keyframes fadein { to { opacity: 1; } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
+.letterbox::before, .letterbox::after { content: ''; position: absolute; left: 0; right: 0; height: 11vh; background: #000; z-index: 2; }
+.letterbox::before { top: 0; }
+.letterbox::after { bottom: 0; }
+.narration { position: absolute; left: 50%; bottom: 15vh; transform: translateX(-50%); width: min(900px, 86vw); text-align: center; z-index: 3; }
+.narration .line { font-family: var(--font-title); font-size: clamp(22px, 2.4vw, 34px); line-height: 1.35; color: #eadbbd; text-shadow: 0 0 10px #000, 0 2px 4px #000; opacity: 0; transition: opacity 1.4s ease; margin: 6px 0; }
+.narration .line.b { font-size: clamp(17px, 1.7vw, 23px); font-style: italic; color: #c9b590; }
+.narration .line.show { opacity: 1; }
+.skip-hint { position: absolute; right: 22px; bottom: calc(11vh + 12px); z-index: 3; font-size: 13px; color: #8a7a62; letter-spacing: .05em; }
+.pause { background: rgba(5,4,3,.72); }
+.panel { min-width: 340px; padding: 26px 30px; background: linear-gradient(#17110d, #0d0a08); border: 1px solid #6a5034; box-shadow: 0 0 40px #000; text-align: center; }
+.panel h2 { margin: 0 0 18px; font-family: var(--font-title); font-size: 34px; color: #e8d6b0; letter-spacing: .08em; }
+.btn { display: block; width: 100%; margin: 8px 0; padding: 11px 16px; font-family: var(--font-body); font-size: 16px; color: #ecdcbc; background: linear-gradient(#2c2018, #1a130e); border: 1px solid #5a432c; cursor: pointer; transition: border-color .15s, color .15s, box-shadow .15s; }
+.btn:hover { border-color: #ff8a3a; color: #ffd7a0; box-shadow: inset 0 0 14px rgba(255,120,40,.25); }
+.panel .hint { margin-top: 16px; font-size: 13px; color: #9a8a70; line-height: 1.6; max-width: 360px; }
+.ending .t { font-family: var(--font-title); font-size: clamp(48px, 7vw, 92px); color: #ecd8b0; text-shadow: 0 0 24px rgba(255,120,40,.4), 0 4px 20px #000; letter-spacing: .08em; opacity: 0; animation: fadein 2s ease .3s forwards; }
+.ending .line { font-family: var(--font-title); font-style: italic; font-size: 22px; color: #c9a878; margin: 8px 0 26px; opacity: 0; animation: fadein 2s ease 1.2s forwards; text-align: center; padding: 0 20px; }
+.ending .stats { opacity: 0; animation: fadein 1.5s ease 2.2s forwards; font-size: 17px; line-height: 1.9; color: #e0d0b0; text-align: center; text-shadow: 0 0 6px #000; }
+.ending .actions { margin-top: 28px; width: 300px; opacity: 0; animation: fadein 1.5s ease 3s forwards; }
+.ending .thanks { margin-top: 18px; font-size: 14px; color: #8a7a62; opacity: 0; animation: fadein 1.5s ease 3.4s forwards; }
